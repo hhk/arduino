@@ -1,4 +1,4 @@
-int led = 9;
+int led = 13;
 int brightness = 0;
 int fadeAmount = 5;
 
@@ -13,6 +13,6 @@ void loop()  {
   if (brightness == 0 || brightness == 255) {
     fadeAmount = -fadeAmount ;
   }
-  delay (30) ;
+  delay (20) ;
 }
 
