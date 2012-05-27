@@ -12,7 +12,7 @@ void setup()
 void loop()
 {
   val = analogRead(potpin);
-  val = map(val, 0, 1023, 0, 500);
+  val = map(val, 0, 1023, 0, 1000);
   digitalWrite(1, HIGH);
   digitalWrite(2, LOW);
   digitalWrite(3, LOW);
@@ -35,21 +35,11 @@ void loop()
   delay(val);
   digitalWrite(1, LOW);
   digitalWrite(2, LOW);
-  digitalWrite(3, LOW);
-  digitalWrite(4, HIGH);
-  delay(val);
-  digitalWrite(1, LOW);
-  digitalWrite(2, LOW);
   digitalWrite(3, HIGH);
   digitalWrite(4, LOW);
   delay(val);
   digitalWrite(1, LOW);
   digitalWrite(2, HIGH);
-  digitalWrite(3, LOW);
-  digitalWrite(4, LOW);
-  delay(val_);
-  digitalWrite(1, HIGH);
-  digitalWrite(2, LOW);
   digitalWrite(3, LOW);
   digitalWrite(4, LOW);
   delay(val);
