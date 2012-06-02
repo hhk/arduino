@@ -29,5 +29,15 @@ void loop()
   val = analogRead(potpin);
   val = map(val, 0, 1023, 0, 1000);
   
-  number(LOW, HIGH, HIGH, HIGH, LOW, LOW, LOW);
-  number(HIGH, HIGH, HIGH, HIGH, HIGH,
+  number(LOW, HIGH, HIGH, HIGH, LOW, LOW, LOW, LOW);
+  number(HIGH, HIGH, HIGH, LOW, HIGH, HIGH, HIGH, LOW);
+  number(HIGH, HIGH, HIGH, HIGH, HIGH, LOW, HIGH, LOW);
+  number(LOW, HIGH, HIGH, HIGH, LOW, LOW, HIGH, HIGH);
+  number(HIGH, LOW, HIGH, HIGH, HIGH, LOW, HIGH, HIGH);
+  number(HIGH, LOW, HIGH, HIGH, HIGH, HIGH, HIGH, HIGH);
+  number(HIGH, HIGH, HIGH, HIGH, LOW, LOW, LOW, LOW);
+  number(HIGH, HIGH, HIGH, HIGH, HIGH, HIGH, HIGH, HIGH);
+  number(HIGH, HIGH, HIGH, HIGH, LOW, LOW, HIGH, HIGH);
+  number(HIGH, HIGH, HIGH, HIGH, HIGH, HIGH, LOW, HIGH);
+}
+
