@@ -11,23 +11,15 @@ void setup()
   pinMode(7, OUTPUT);
   pinMode(8, OUTPUT);
 }
-
-void show_number(int pin2, int pin3, int pin4, int pin5, int pin6, int pin7, int pin8)
+void get_number()
 {
-   val = analogRead(potpin);
+    val = analogRead(potpin);
    val = map(val, 0, 1023, 0, 9);
-   digitalWrite(2, pin2);
-   digitalWrite(3, pin3);
-   digitalWrite(4, pin4);
-   digitalWrite(5, pin5);
-   digitalWrite(6, pin6);
-   digitalWrite(7, pin7); 
-   digitalWrite(8, pin8);  
 }
 
- void loop()
- {
- if (val == 0)
+void figure_out_wich_number_to_show()
+{
+   if (val == 0)
  {
    show_number(HIGH,  LOW, HIGH, HIGH, HIGH, HIGH, HIGH);
  }
@@ -67,5 +59,21 @@ if (val == 5)
    {
    show_number(HIGH, HIGH,  LOW, HIGH, HIGH, HIGH, HIGH);
    }
-   
+}
+
+void show_number(int pin2, int pin3, int pin4, int pin5, int pin6, int pin7, int pin8)
+{
+   digitalWrite(2, pin2);
+   digitalWrite(3, pin3);
+   digitalWrite(4, pin4);
+   digitalWrite(5, pin5);
+   digitalWrite(6, pin6);
+   digitalWrite(7, pin7); 
+   digitalWrite(8, pin8);  
+}
+
+ void loop()
+ {
+   get_number();
+   figure_out_wich_number_to_show();
  }
