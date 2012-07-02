@@ -1,4 +1,3 @@
-//are this program right?
 
 // *Is* the program right? 
 //
@@ -8,7 +7,9 @@
 
 
 #include <servo.h>
+//This has an error it says 'servo' does not name a  type
 servo servo;
+
 void setup()
 {
   servo attach(3, 500, 2500);
@@ -24,6 +25,6 @@ void loop()
   servoWrite(digitalValue);
   serial.print(sensorValue);
   // strings must be surrounded by double quotes (") so this should be " ".
-  serial.print(  );
-  serial.println(digitalValue);
+  "serial.print(  );"
+  "serial.println(digitalValue);"
 }
