@@ -1,30 +1,21 @@
+#include <Servo.h>
 
-// *Is* the program right? 
-//
-// * Capitalization is important and must be excatly right. 
-// * Punctuation is important and has specialm meaning. It also has to be exactly right. 
-// servo attach should be servo.attach for example (missing period).
-
-
-#include <servo.h>
-//This has an error it says 'servo' does not name a  type
-servo servo;
+Servo servo;
 
 void setup()
 {
-  servo attach(3, 500, 2500);
-  serial begin(9600);
+  servo.attach(3, 500, 2500);
+  Serial.begin(9600);
 }
 
 void loop()
 {
   int sensorValue = analogRead (A5);
-  // We can use map() here to make it from 0 to 180. 
-  // This does the same thing, but map() I think is more understandable. 
-  int digitalValue  = (int) (180* sensorValue/1024.0);
-  servoWrite(digitalValue);
-  serial.print(sensorValue);
-  // strings must be surrounded by double quotes (") so this should be " ".
-  "serial.print(  );"
-  "serial.println(digitalValue);"
+  int digitalValue  = map(sensorValue, 0, 1023, 0, 180);
+  servo.write(digitalValue);
+  
+  Serial.print(sensorValue);
+  Serial.print("  ");
+  Serial.println(digitalValue);
 }
+
